@@ -1,0 +1,28 @@
+---
+server:
+    install: '1'
+    packages: [vim, git, imagemagick, nodejs, npm]
+    timezone: UTC
+    locale: pt_BR.UTF-8
+vagrant_local:
+    install: '1'
+    vm: { base_box: trusty64, hostname: default, ip: 192.168.50.4, memory: '512', sharedfolder: './', useVagrantCloud: '1', syncType: nfs }
+nginx:
+    install: '1'
+    docroot: /vagrant/www
+    servername: appserver.vb
+pgsql:
+    install: '1'
+    database: postgres
+    user: postgres
+    password: '123456'
+    dump: ''
+mongodb:
+    install: '1'
+redis:
+    install: '1'
+    port: '6379'
+elasticsearch:
+    install: '1'
+    port: '9200'
+    version: 1.5.2
